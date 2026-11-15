@@ -17,7 +17,7 @@ REM # VARIABLES
 REM ###############################################################################
 set "OSOTFile=OmnissaHorizonOSOptimizationTool-x86_64-1.2.2609.37751670449.exe"
 set "OSOTPath=C:\Program Files\Omnissa\OSOptimization"
-set "TEMPLATEFile=RUAG-Win11 25H2-V1.0.xml"
+set "TEMPLATEFile=Win11-25H2-V1.0.xml"
 set "TEMPDIR=C:\temp"
 set "CYTOOL=C:\Program Files\Palo Alto Networks\Traps\cytool.exe"
 
