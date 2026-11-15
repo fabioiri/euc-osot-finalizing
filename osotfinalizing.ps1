@@ -14,7 +14,7 @@ REM # SET DYNAMIC VARIABLES
 REM ############################################################################### 
 set "OSOTFile=OmnissaHorizonOSOptimizationTool-x86_64-1.2.2609.37751670449.exe"
 set "OSOTPath=C:\Program Files\Omnissa\OSOptimization"
-set "TEMPLATEFile=RUAG-Win11 25H2-V1.0.xml" 
+set "TEMPLATEFile=Win11-25H2-V1.0.xml" 
 
 set "OSOT=%OSOTPath%\%OSOTFile%"
 set "TEMPLATE=%OSOTPath%\%TEMPLATEFile%"
