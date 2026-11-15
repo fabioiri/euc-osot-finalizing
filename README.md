@@ -55,7 +55,7 @@ Edit the variables at the top of the script:
 ```bat
 set "OSOTFile=OmnissaHorizonOSOptimizationTool-x86_64-1.2.2609.37751670449.exe"
 set "OSOTPath=C:\Program Files\Omnissa\OSOptimization"
-set "TEMPLATEFile=RUAG-Win11 25H2-V1.0.xml"
+set "TEMPLATEFile=Win11-25H2-V1.0.xml"
 ```
 
 When you update OSOT or the template, change `OSOTFile` and `TEMPLATEFile` accordingly.
@@ -94,4 +94,4 @@ When you update OSOT or the template, change `OSOTFile` and `TEMPLATEFile` accor
 
 ## License
 
-Add your preferred license here (e.g. MIT) or mark the repository as internal.
+internal repository.
