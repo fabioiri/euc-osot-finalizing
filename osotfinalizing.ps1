@@ -7,13 +7,16 @@ REM
 REM  TITLE       : Omnissa OS Optimization Tool
 REM  DESCRIPTION : Windows 11 25H2 - Horizon Golden Image
 REM  VERSION     : 1.1
-REM  CREATED BY  : Fabio
-REM  CREATED ON  : 13.11.2026
+REM  CREATED BY  : Fabio Irigoyen
+REM  CREATED ON  : 16.11.2026
 REM
 REM ============================================================
 
 REM ###############################################################################
 REM # VARIABLES
+REM # OSOT Executable
+REM # OSOT Path
+REM # XML Template File
 REM ###############################################################################
 set "OSOTFile=OmnissaHorizonOSOptimizationTool-x86_64-1.2.2609.37751670449.exe"
 set "OSOTPath=C:\Program Files\Omnissa\OSOptimization"
@@ -112,15 +115,6 @@ echo # Emptying Recycle Bin
 echo ###############################################################################
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Clear-RecycleBin -Force -ErrorAction SilentlyContinue"
 echo Recycle Bin cleanup done.
-
-REM ###############################################################################
-REM # DISABLE UPDATE SERVICES
-REM ###############################################################################
-echo ###############################################################################
-echo # Stopping and disabling Windows Update
-echo ###############################################################################
-net stop wuauserv
-sc config wuauserv start= disabled
 
 echo ###############################################################################
 echo # Stopping and disabling Edge Update
