@@ -30,6 +30,7 @@ REM ############################################################################
 net session >nul 2>&1
 if errorlevel 1 (
     echo ERROR: This script must be run as Administrator!
+    pause
     exit /b 1
 )
 
@@ -38,14 +39,17 @@ REM # CHECK REQUIRED FILES
 REM ###############################################################################
 if not exist "%OSOT%" (
     echo ERROR: OSOT executable not found: "%OSOT%"
+    pause
     exit /b 1
 )
 if not exist "%TEMPLATE%" (
     echo ERROR: XML template not found: "%TEMPLATE%"
+    pause
     exit /b 1
 )
 if not exist "%CYTOOL%" (
     echo ERROR: Cortex cytool not found: "%CYTOOL%"
+    pause
     exit /b 1
 )
 
@@ -76,6 +80,7 @@ start "" /wait "%OSOT%" ^
 
 if errorlevel 1 (
     echo ERROR: OSOT finished with errors. Exit code: %errorlevel%
+    pause
     exit /b 1
 )
 
@@ -88,6 +93,7 @@ echo ###########################################################################
 if exist "%TEMPDIR%\" (
     pushd "%TEMPDIR%" || (
         echo ERROR: Cannot access %TEMPDIR%
+        pause
         exit /b 1
     )
     del /q /f /s "*.*" >nul 2>&1
