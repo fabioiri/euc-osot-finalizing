@@ -17,6 +17,7 @@ REM # VARIABLES
 REM # OSOT Executable
 REM # OSOT Path
 REM # XML Template File
+REM # Files necessary in OSOTPath: XML Template, sdelete64.exe, LGPO.exe, OSOT Executable
 REM ###############################################################################
 set "OSOTFile=OmnissaHorizonOSOptimizationTool-x86_64-1.2.2609.37751670449.exe"
 set "OSOTPath=C:\Program Files\Omnissa\OSOptimization"
