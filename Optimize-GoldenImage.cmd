@@ -22,7 +22,6 @@ REM ############################################################################
 set "OSOTFile=OmnissaHorizonOSOptimizationTool-x86_64-1.2.2609.37751670449.exe"
 set "OSOTPath=C:\Program Files\Omnissa\OSOptimization"
 set "TEMPLATEFile=Win11-25H2-V1.0.xml"
-set "TEMPDIR=C:\temp"
 set "CYTOOL=C:\Program Files\Palo Alto Networks\Traps\cytool.exe"
 
 set "OSOT=%OSOTPath%\%OSOTFile%"
@@ -94,17 +93,20 @@ REM ############################################################################
 echo ###############################################################################
 echo # Deleting all files in %TEMPDIR%
 echo ###############################################################################
+@echo off
+set "TEMPDIR=C:\temp"
+
 if exist "%TEMPDIR%\" (
     pushd "%TEMPDIR%" || (
-        echo ERROR: Cannot access %TEMPDIR%
+        echo ERROR: Cannot access "%TEMPDIR%"
         pause
         exit /b 1
     )
-    del /q /f /s "*.*" >nul 2>&1
-    for /d %%D in ("%TEMPDIR%\*") do rd /s /q "%%D" >nul 2>&1
+    del /q /f /s * >nul 2>&1
+    for /d %%D in (*) do rd /s /q "%%D" >nul 2>&1
     popd
 ) else (
-    echo %TEMPDIR% not found, creating it for the Cortex scan...
+    echo "%TEMPDIR%" not found, creating it for the Cortex scan...
     mkdir "%TEMPDIR%"
 )
 
