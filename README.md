@@ -40,6 +40,9 @@ A Windows batch script that prepares a **Windows 11 25H2** golden image for **Om
 | `-background` | `#4c4a48` |
 | `-f` | Finalize tasks `0 1 3 4 5 7 8 9 10` (see the OSOT documentation for what each index does) |
 
+## OSOT documentation
+https://docs.omnissa.com/Optimizing-Images-for-Horizon/RunWindowsOSOptimizationToolforHorizonfromCommandLine/
+
 ## Requirements
 
 - Windows 11 25H2 golden image VM (run **as Administrator**)
